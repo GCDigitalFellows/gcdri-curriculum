@@ -1,0 +1,3 @@
+[submodule "GitDRI"]
+	path = GitDRI
+	url = git@github.com:GCDigitalFellows/GitDRI.git
