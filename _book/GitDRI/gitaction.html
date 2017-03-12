@@ -1,0 +1,890 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>Git add, commit, and push · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="gitpull.html" />
+    
+    
+    <link rel="prev" href="github.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../philosophy.html">
+            
+                <a href="../philosophy.html">
+            
+                    
+                    Philosophy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../acknowledgements.html">
+            
+                <a href="../acknowledgements.html">
+            
+                    
+                    Acknowledgements
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../core.html">
+            
+                <a href="../core.html">
+            
+                    
+                    Core Sessions
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../intro-command-line/NESTED-README.html">
+            
+                <a href="../intro-command-line/NESTED-README.html">
+            
+                    
+                    Command line
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../intro-command-line/sections/what-is-the-command-line.html">
+            
+                <a href="../intro-command-line/sections/what-is-the-command-line.html">
+            
+                    
+                    What's the command line?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../intro-command-line/sections/getting-to-the-command-line.html">
+            
+                <a href="../intro-command-line/sections/getting-to-the-command-line.html">
+            
+                    
+                    Getting to the command line
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../intro-command-line/sections/navigation.html">
+            
+                <a href="../intro-command-line/sections/navigation.html">
+            
+                    
+                    Navigation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../intro-command-line/sections/creating-files-and-folders.html">
+            
+                <a href="../intro-command-line/sections/creating-files-and-folders.html">
+            
+                    
+                    Creating files and folders
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="../intro-command-line/sections/creating_a_cheat_sheet.html">
+            
+                <a href="../intro-command-line/sections/creating_a_cheat_sheet.html">
+            
+                    
+                    Creating a cheat sheet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="../intro-command-line/sections/pipes.html">
+            
+                <a href="../intro-command-line/sections/pipes.html">
+            
+                    
+                    Pipes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="../intro-command-line/sections/data.html">
+            
+                <a href="../intro-command-line/sections/data.html">
+            
+                    
+                    Exploring text data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="../intro-command-line/sections/grep.html">
+            
+                <a href="../intro-command-line/sections/grep.html">
+            
+                    
+                    Searching text data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.9" data-path="../intro-command-line/sections/other-commands.html">
+            
+                <a href="../intro-command-line/sections/other-commands.html">
+            
+                    
+                    Other useful commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.10" data-path="../intro-command-line/sections/challenges.html">
+            
+                <a href="../intro-command-line/sections/challenges.html">
+            
+                    
+                    Further challenges
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Git
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="gitvsgithub.html">
+            
+                <a href="gitvsgithub.html">
+            
+                    
+                    Git vs. GitHub
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="gitconfig.html">
+            
+                <a href="gitconfig.html">
+            
+                    
+                    Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="gitinit.html">
+            
+                <a href="gitinit.html">
+            
+                    
+                    Initialize Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="github.html">
+            
+                <a href="github.html">
+            
+                    
+                    Connecting to GitHub
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.2.5" data-path="gitaction.html">
+            
+                <a href="gitaction.html">
+            
+                    
+                    Git add, commit, and push
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="gitpull.html">
+            
+                <a href="gitpull.html">
+            
+                    
+                    Git for collaboration: cloning and pulling
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../intro-python/">
+            
+                <a href="../intro-python/">
+            
+                    
+                    Python
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../intro-python/installation.html">
+            
+                <a href="../intro-python/installation.html">
+            
+                    
+                    Getting set up
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../intro-python/repl.html">
+            
+                <a href="../intro-python/repl.html">
+            
+                    
+                    Interacting with Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.3" data-path="../intro-python/types.html">
+            
+                <a href="../intro-python/types.html">
+            
+                    
+                    Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4" data-path="../intro-python/variables.html">
+            
+                <a href="../intro-python/variables.html">
+            
+                    
+                    Variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.5" data-path="../intro-python/run.html">
+            
+                <a href="../intro-python/run.html">
+            
+                    
+                    Your first script
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.6" data-path="../intro-python/multiline.html">
+            
+                <a href="../intro-python/multiline.html">
+            
+                    
+                    Multi-line string
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.7" data-path="../intro-python/loops.html">
+            
+                <a href="../intro-python/loops.html">
+            
+                    
+                    Loops
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.8" data-path="../intro-python/conditionals.html">
+            
+                <a href="../intro-python/conditionals.html">
+            
+                    
+                    Conditionals
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.9" data-path="../intro-python/input.html">
+            
+                <a href="../intro-python/input.html">
+            
+                    
+                    Input
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.10" data-path="../intro-python/google.html">
+            
+                <a href="../intro-python/google.html">
+            
+                    
+                    Using Google
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.11" data-path="../intro-python/importing.html">
+            
+                <a href="../intro-python/importing.html">
+            
+                    
+                    Importing modules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.12" data-path="../intro-python/motivate.html">
+            
+                <a href="../intro-python/motivate.html">
+            
+                    
+                    A little motivation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.13" data-path="../intro-python/resources.html">
+            
+                <a href="../intro-python/resources.html">
+            
+                    
+                    Python resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../GCDRI_databases/">
+            
+                <a href="../GCDRI_databases/">
+            
+                    
+                    Databases
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../GCDRI_databases/sections/0-dbintro.html">
+            
+                <a href="../GCDRI_databases/sections/0-dbintro.html">
+            
+                    
+                    Introduction to databases
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../GCDRI_databases/sections/1-builddb.html">
+            
+                <a href="../GCDRI_databases/sections/1-builddb.html">
+            
+                    
+                    Building a database
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../GCDRI_databases/sections/2-buildtable.html">
+            
+                <a href="../GCDRI_databases/sections/2-buildtable.html">
+            
+                    
+                    Building tables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../GCDRI_databases/sections/3-insertdata.html">
+            
+                <a href="../GCDRI_databases/sections/3-insertdata.html">
+            
+                    
+                    Inserting data into tables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.5" data-path="../GCDRI_databases/sections/4-updatefield.html">
+            
+                <a href="../GCDRI_databases/sections/4-updatefield.html">
+            
+                    
+                    Updating table fields
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.6" data-path="../GCDRI_databases/sections/5-foreignkeys.html">
+            
+                <a href="../GCDRI_databases/sections/5-foreignkeys.html">
+            
+                    
+                    Foreign keys!
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.7" data-path="../GCDRI_databases/sections/6-commonqueries.html">
+            
+                <a href="../GCDRI_databases/sections/6-commonqueries.html">
+            
+                    
+                    General database queries
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.8" data-path="../GCDRI_databases/sections/7-innerjoin.html">
+            
+                <a href="../GCDRI_databases/sections/7-innerjoin.html">
+            
+                    
+                    Joins
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.9" data-path="../GCDRI_databases/sections/8-importcsv.html">
+            
+                <a href="../GCDRI_databases/sections/8-importcsv.html">
+            
+                    
+                    Importing a csv file into a SQL table
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.10" data-path="../GCDRI_databases/sections/9-excel_v_db.html">
+            
+                <a href="../GCDRI_databases/sections/9-excel_v_db.html">
+            
+                    
+                    Databases vs. Excel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.11" data-path="../GCDRI_databases/sections/10-pyplussql-pseudo.html">
+            
+                <a href="../GCDRI_databases/sections/10-pyplussql-pseudo.html">
+            
+                    
+                    SQL + Python = Awesome!
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Git add, commit, and push</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="add-commit-and-push">Add, Commit, and Push</h1><p>You can use Git to track the different versions of a file by first <em>adding</em> it so that Git is aware of the file you are interested in, second <em>commiting</em> the changes you made. This all happens on your <strong>local computer</strong>. When you want these changes to be visible on the remote repo you are connected to, you then <em>push</em> it from the local to the remote.</p><h2 id="making-changes">Making changes</h2><p>Return to the gitcheat.md you&apos;ve made and add some notes about the commands we have learened so far to it.</p><p>Let&apos;s start with these:</p><ul><li>git config --global user.name &quot;[name]
+</li>
+<li>git config --global user.email &quot;[email address]
+</li>
+<li>git config --list
+</li>
+<li>git init
+</li>
+<li>git remote add origin [URL of your remote repo]
+</li>
+<li>git remote -v
+</li></ul>
+<p>Remember to save it!</p><h2 id="git-add">Git Add</h2><p>In your working directory (GitPractice) in the command line, type:</p><p><code>git add gitcheat.md</code></p><p>This stages the file to be tracked, and prepares it to be committed.</p><p>If you have been working on multiple files, <code>git add --all</code> adds all files if you have many to be tracked.</p><h2 id="git-commit">Git Commit</h2><p>Type: <code>git commit -m &quot;[add a message here about the commits you&apos;re making]&quot;</code></p><p>Be brief but descriptive about changes in this version so that both you and your collaborators know the differences between your versions.</p><h5 id="congrats-youve-committed-your-first-changes-to-your-local-git-repo">Congrats! You&apos;ve committed your first changes to your <em>local</em> Git repo!</h5><p>To commit and add at the same time, use the command:</p><p><code>git commit -a</code></p><p>But keep in mind that this does not include a message out the version you just logged. To add and commit <em>with</em> a message about this version, use:</p><p><code>git commit -am &quot;[message about the commits]&quot;</code></p><p>It is good practice to check your status (make sure you&apos;re in the working directory) using:</p><p><code>git status</code></p><p>Git will tell you if changes have been made but not &quot;staged&quot; (i.e. not added) or committed.</p><h5 id="you-can-practice-adding-and-committing-by-inserting-these-into-your-gitcheatmd-file">You can practice adding and committing by inserting these into your gitcheat.md file:</h5><ul><li>git status
+</li>
+<li>git add
+</li>
+<li>git commit -m &quot;[message]&quot;
+</li>
+<li>git commit -am &quot;[message]&quot;
+</li></ul>
+<p>Now, how do you get these changes onto GitHub so that others can see your good work?</p><h2 id="git-push">Git Push</h2><p>Because our local and remote repos are connected, we can <code>push</code> our local repo to its remote directory.</p><p>In the command line, type:</p><p><code>git push -u origin master</code> (this pushes to the master branch)</p><p>You&apos;ll then be prompted to enter your GitHub username and password.</p><p>Refresh GitHub in the browser to see your changes.</p><h5 id="cheer-wildly">Cheer wildly!</h5><p>After your first commit, you can just use <code>git push</code> to push commits from your local repo to your remote repo on GitHub.</p><hr><p><a href="github.html">&lt;&lt;&lt; Connect GitHub</a> - <a href="gitpull.html">Making a copy from GitHub &gt;&gt;&gt;</a></p><p><a href="glossary.md">Glossary</a> ~ ~ ~ <a href="helpfulcommands.md">Helpful commands</a></p>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="github.html" class="navigation navigation-prev " aria-label="Previous page: Connecting to GitHub">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="gitpull.html" class="navigation navigation-next " aria-label="Next page: Git for collaboration: cloning and pulling">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Git add, commit, and push","level":"1.4.2.5","depth":3,"next":{"title":"Git for collaboration: cloning and pulling","level":"1.4.2.6","depth":3,"path":"GitDRI/gitpull.md","ref":"GitDRI/gitpull.md","articles":[]},"previous":{"title":"Connecting to GitHub","level":"1.4.2.4","depth":3,"path":"GitDRI/github.md","ref":"GitDRI/github.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"GitDRI/gitaction.md","mtime":"2017-03-12T17:41:56.796Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2017-03-12T17:47:40.602Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
