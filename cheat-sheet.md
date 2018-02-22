@@ -1,9 +1,6 @@
 Digital Research Institute Cheat Sheet
 ======================================
 
-Table of Contents
-=================
-
    * [Command Line](#command-line)
       * [Commands](#commands)
       * [Glossary](#glossary)
